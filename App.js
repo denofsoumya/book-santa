@@ -5,10 +5,13 @@ import WelcomeScreen from './screens/WelcomeScreen';
 import {createSwitchNavigator,createAppContainer} from 'react-navigation';
 import {AppTabNavigator} from './components/AppTabNavigator';
 import {AppDrawerNavigator} from './components/AppDrawerNavigator'
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 export default function App() {
   return (
+    <SafeAreaProvider>
    <AppContainer/>
+   </SafeAreaProvider>
   );
 }
 

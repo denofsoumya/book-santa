@@ -6,21 +6,21 @@ import db from '../config';
 
 export default class ReceiverDetailsScreen extends React.Component{
 
-    constructor(props){
-        super(props);
-        this.state={
-            userId: firebase.auth().currentUser.email,
-            userName:'',
-            receiverId: this.props.navigation.getParam('details')["user_id"],
-            requestId: this.props.navigation.getParam('details')["request_id"],
-            bookName: this.props.navigation.getParam('details')["book_name"],
-            reason_for_requesting: this.props.navigation.getParam('details')["reason_to_request"],
-            receiverName: '',
-            receiverContact: '',
-            receiverAddress: '',
-            receiverRequestDocId: ''
+        constructor(props){
+            super(props);
+            this.state={
+                userId: firebase.auth().currentUser.email,
+                userName:'',
+                receiverId: this.props.navigation.getParam('details')["user_id"],
+                requestId: this.props.navigation.getParam('details')["request_id"],
+                bookName: this.props.navigation.getParam('details')["book_name"],
+                reason_for_requesting: this.props.navigation.getParam('details')["reason_to_request"],
+                receiverName: '',
+                receiverContact: '',
+                receiverAddress: '',
+                receiverRequestDocId: ''
+            }
         }
-    }
 
 
     getUserDetails=(userId)=>{

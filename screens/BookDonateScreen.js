@@ -34,8 +34,8 @@ export default class BookDonateScreen extends Component{
 
     renderItem=({item,i})=>{
         return(
-            <ListItem bottomDivider>
-                 <ListItem.Content>
+            <ListItem bottomDivider >
+                 <ListItem.Content >
                       <ListItem.Title style={{ color: "black", fontWeight: "bold" }}> 
                       {item.book_name}
                        </ListItem.Title>
@@ -43,7 +43,8 @@ export default class BookDonateScreen extends Component{
                            {item.reason_to_request}
                       </ListItem.Subtitle>
                  </ListItem.Content>
-                  <TouchableOpacity style={styles.button} onPress={() => { this.props.navigation.navigate('ReceiverDetails',{"details":item}) }}> 
+                  <TouchableOpacity style={styles.button} 
+                  onPress={() => { this.props.navigation.navigate('ReceiverDetails',{"details":item}) }}> 
                     <Text style={{ color: '#ffff' }}>View</Text> 
                     </TouchableOpacity>
                      </ListItem>
